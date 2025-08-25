@@ -60,7 +60,64 @@ public class MainTest {
         assertEquals(Main.isPrime(4), false);
         assertEquals(Main.isPrime(11), true);
         assertEquals(Main.isPrime(1), true);
+    }
 
+    // excerise 2
 
+    @Test
+    void sum_returns6_When2Plus4(){
+        int a = 2;
+        int b = 4;
+
+        int expected = 6;
+        int actual = Main.sum(2,4);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void isEven_returnsTrue_whenEntered4(){
+        int a = 4;
+        boolean expected = true;
+
+        boolean actual = Main.isEven(a);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void reverseString_returnsavaJ_whenEnteredJava(){
+        String text = "Java";
+        String expected = "avaJ";
+        String actual = Main.reverseString(text);
+        assertEquals(expected, actual);
+        assertEquals(Main.reverseString("Hallo"), "ollaH");
+    }
+
+    @Test
+    void palindrome_returnsTrue_whenEnteredOtto(){
+        String text = "Otto";
+        boolean expected = true;
+        boolean actual = Main.palindrome(text);
+        assertEquals(expected, actual);
+        assertEquals(false, Main.palindrome("Java"));
+    }
+    @Test
+    void countVowels_return2_whenEnteredHallo(){
+        String text = "Hallo";
+        int expected = 2;
+        int actual = Main.countVowels(text);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void mergeArrays_returns12345_whenEntered12and34And5(){
+        int[] a = {1,2};
+        int[] b = {3,4};
+        int[] c = {5};
+
+        int[] expected = {1,2,3,4,5};
+        int[] actual = Main.mergeArrays(a,b,c);
+
+        assertArrayEquals(expected, actual);
     }
 }
