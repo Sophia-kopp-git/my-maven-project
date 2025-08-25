@@ -4,14 +4,42 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+
+
+
+    }
+
+    public static boolean isEven(int num){
+        return num % 2 == 0;
+    }
+    public static int multiply(int a, int b){
+        return a*b;
+    }
+    public static boolean isPositive(int a){
+        return a >= 0;
+    }
+    public static String getFirstLetter(String text){
+        if (text == null || text.equals("")){
+            return null;
+        } else {
+            return "" + text.charAt(0);
         }
+    }
+    public static int devideNum(int a, int b){
+        if (b <= 0){
+            throw new IllegalArgumentException("second integer must be bigger 0");
+        } else {
+            return a / b;
+        }
+    }
+
+    public static boolean isPrime(int a){
+        for (int i = 2; i < a; i++)
+            if (a % i == 0){
+                return false;
+            }
+
+        return true;
     }
 }
